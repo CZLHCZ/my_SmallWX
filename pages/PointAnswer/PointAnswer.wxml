@@ -1,0 +1,59 @@
+<view class="resh" hidden="{{hidden}}">
+  <image animation="{{refreshAnimation}}" hidden="{{hidden}}" src="../../images/load.gif"></image>
+</view>
+<view class="container">
+  <view class="buttons Mborder">
+    <view class="button_hot {{selectedhot?'hot_tab':'default'}}" data-index="0" bindtap="selected_hot"></view>
+    <view class="button_new {{selectednew?'new_tab':'default'}}" data-index="1" bindtap="selected_new"></view>
+  </view>
+  <view class="scroll">
+    <view class="wrap" style="width:100%;">
+      <view class="weui-search-bar item_border" id="searchBar" style="border-bottom:none;">
+        <form class="weui-search-bar__form" style="display:block;">
+          <view class="weui-search-bar__box">
+            <view class="weui-icon-search icon-sou"></view>
+            <input focus="{{focus}}" class="weui-search-bar__input" id="searchInput" bindinput="bindInput" bindconfirm="bindconfirm" placeholder="" bindblur="" value="{{inputValue}}" />
+            <a href="javascript:" class="weui-icon-clear icon-close16" id="searchClear" bindtap="clickcancel"></a>
+          </view>
+          <view class="{{selected?'hidden':'show'}} weui-search-bar__label" id="searchText" bindtap="bclick">
+            <view class="weui-icon-search icon-sou soucenter"></view>
+            <text style="font-size:30rpx">搜索...</text>
+          </view>
+        </form>
+      </view>
+      <text class="answer" bindtap="myanswer">我要提问</text>
+    </view>
+    <view wx:for="{{datas}}" class="wrap_content" bindtap="AnswerContent" data-id="{{item.id}}" wx:key="wrap_content">
+      <view class="user">
+        <view class="user_avata">
+          <image src="{{item.avatarUrl}}"></image>
+          <text>{{item.nickname}}</text>
+        </view>
+      </view>
+      <view class="title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="anser_title">
+        <view class="title_content">{{item.desc_describe}}</view>
+      </view>
+      <view class="nice_wrap">
+        <view class="nice">
+          <view class="nice_zan">
+            <view class="eye">
+              <image src="../../images/eye60.png"></image>
+            </view>
+            <text class="nicehand">{{item.visit_num}}</text>
+          </view>
+          <view class="nice_ping">
+            <text class="icon-new44"></text>
+            <text class="comment">{{item.answer_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view hidden="{{show}}" class="nomore">
+      <view style="width:40%;margin:0 auto;">没有更多了哦~</view>
+    </view>
+  </view>
+  <!--问题-->
+</view>

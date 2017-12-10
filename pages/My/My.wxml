@@ -1,0 +1,127 @@
+<!--pages/My/My.wxml-->
+<view class="resh" hidden="{{hidden}}">
+  <image animation="{{refreshAnimation}}" hidden="{{hidden}}" src="../../images/load.gif"></image>
+</view>
+<view class="container" style="">
+  <view class="my_header">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="username">{{userInfo.nickName}}</view>
+  </view>
+
+  <!--导航条-->
+  <view class="nav">
+    <view class="nav_content">
+      <view class="navsize {{selected?'red':'default'}}" bindtap="selected"></view>
+      <view class="navsize {{selected1?'blue':'default1'}}" bindtap="selected1"></view>
+      <view class="navsize {{selected2?'yellow':'default2'}}" bindtap="selected2"></view>
+      <view class="navsize {{selected3?'green':'default3'}}" bindtap="selected3"></view>
+    </view>
+  </view>
+
+  <!--<text class="nomore" wx:if="{{datas.length==0}}">没有更多内容哦11~</text>-->
+  <view class="Menu {{selected?'show':'hidden'}}">
+    <view wx:for="{{datas}}" class="semenu" wx:key="Menu">
+      <view class="menuname">
+        <span class="icon-new41 my_icon"></span>
+        <text>{{item.title}}</text>
+        <span class="icon-close16 myiconclose" bindtap="closeimg" data-remove="{{index}}" data-id="{{item.oid}}"></span>
+      </view>
+      <view class="menuimg">
+        <image src="{{item.cover}}" mode="aspectFill" data-img="{{item.id}}" bindtap="bindViewTap"></image>
+      </view>
+      <view class="nice_wrap">
+        <view class="nice">
+          <view class="nice_zan">
+            <text class="icon-new43"></text>
+            <text class="nicehand">{{item.like_num}}</text>
+          </view>
+          <view class="nice_ping">
+            <text class=" icon-new44"></text>
+            <text class="comment">{{item.comment_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--提问-->
+  <view class="Question {{selected1?'show':'hidden'}}">
+    <view wx:for="{{datas}}" class="question_wrap" wx:key="Question">
+      <view class="topicon">
+        <span class="icon-close16 quesyion_icon" bindtap="closequesyion" data-remove="{{index}}" data-id="{{item.id}}"></span>
+      </view>
+      <view class="question_list" data-img="{{item.id}}" bindtap="bindQuestion">
+        <text class="title">{{item.title}}</text>
+        <view class="que_content">{{item.desc_describe}}</view>
+        <view class="nice_wrap">
+          <view class="nice">
+            <view class="nice_zan">
+              <text class="icon-new43"></text>
+              <text class="nicehand">{{item.like_num}}</text>
+            </view>
+            <view class="nice_ping">
+              <text class="icon-new44" style="color:#bed636"></text>
+              <text class="comment">{{item.answer_num}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--回答-->
+  <view class=" Question {{selected2?'show':'hidden'}}">
+    <view wx:for="{{datas}}" class="question_wrap" wx:key="Question">
+      <view class="topicon"><span class="icon-close16 quesyion_icon" bindtap="closeAnswers" data-remove="{{index}}" data-id="{{item.id}}"></span> </view>
+      <view class="question_list" data-img="{{item.qid}}" bindtap="bindQuestion2">
+        <text class="title">{{item.title}}</text>
+        <view class="que_content">{{item.content}}</view>
+        <view class="nice_wrap">
+          <view class="nice">
+            <view class="nice_zan">
+              <text class="icon-new43"></text>
+              <text class="nicehand">{{item.like_num}}</text>
+            </view>
+
+            <!--<view class="nice_ping">
+              <text class="icon-new44"></text>
+              <text class="comment">{{item.answer_num}}</text>
+            </view>-->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--收藏-->
+  <view class=" Menu {{selected3?'show':'hidden'}}">
+    <view wx:for="{{datas}}" wx:if="{{item.title.length>1}}" class="semenu" wx:key="Menucolect">
+      <view class="menuname">
+        <span class="icon-new41 my_icon"></span>
+        <text>{{item.title}}</text>
+        <span class="icon-close16 myiconclose" bindtap="closecloect" data-remove="{{index}}" data-id="{{item.id}}"></span>
+      </view>
+      <view class="menuimg">
+        <image src="{{item.cover}}" mode="aspectFill" data-img="{{item.id}}" bindtap="bindViewTap"></image>
+      </view>
+      <view class="nice_wrap">
+        <view class="nice">
+          <view class="nice_zan">
+            <text class="icon-new42" style="color:#bed636;"></text>
+            <text class="nicehand">{{item.like_num}}</text>
+          </view>
+          <view class="nice_ping">
+            <text class="icon-ping12"></text>
+            <text class="comment">{{item.comment_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer_nomore " hidden="{{nomore}}">
+    <view style="width:40%;margin:0 auto;">没有更多内容哦~</view>
+  </view>
+</view>
+<loading hidden="{{showload}}">
+  加载中...
+</loading>

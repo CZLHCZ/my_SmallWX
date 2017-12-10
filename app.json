@@ -1,0 +1,52 @@
+{
+  "pages": [
+    
+    "pages/Selectmenu/Selectmenu",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/UploadMenu/UploadMenu",
+    "pages/PointAnswer/PointAnswer",
+    "pages/My/My",
+    "pages/detailmenu/detailmenu",
+    "pages/answerdetail/answerdetail",
+    "pages/AnswerContent/AnswerContent",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "点指烘焙",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#5C5C5",
+    "selectedColor":"#252524",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/Selectmenu/Selectmenu",
+      "text":"精选菜谱",
+      "iconPath": "images/san.png",
+      "selectedIconPath": "images/sanactive.png"
+    },
+    {
+      "pagePath": "pages/UploadMenu/UploadMenu",    
+      "text":"上传菜谱",
+      "iconPath": "images/yuan.png",
+      "selectedIconPath": "images/yuanactive.png"
+    },
+    {
+      "pagePath": "pages/PointAnswer/PointAnswer",
+      "text":"点指问答",
+      "iconPath": "images/close.png",
+      "selectedIconPath": "images/closeactive.png"
+    },
+    {
+      "pagePath": "pages/My/My",
+      "text":"我的",
+       "iconPath": "images/fang.png",
+      "selectedIconPath": "images/fangactive.png"
+    }
+    ]
+  }
+}

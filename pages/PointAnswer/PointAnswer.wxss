@@ -1,0 +1,229 @@
+/* pages/PointAnswer/PointAnswer.wxss */
+@import '../style/weui.wxss';
+@import '../style/common.wxss';
+#searchClear{
+  width:70rpx;
+  cursor: pointer;
+}
+.resh {
+  width: 12%;
+  margin: 10rpx auto 60rpx;
+}
+
+.resh image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.refresh-block {
+  padding: 15px;
+  text-align: center;
+}
+
+.refresh-block image {
+  width: 30px;
+  height: 30px;
+}
+
+.container .hidden {
+  display: none;
+}
+
+.eye {
+  float: left;
+  margin-top: 8rpx;
+}
+
+.eye image {
+  width: 38rpx;
+  height: 26rpx;
+}
+
+.icon-new44 {
+  color: #bed636;
+}
+
+.wrap {
+  width: 100%;
+  height: 164rpx;
+}
+
+.wrap .answer {
+  background: #3bbac5;
+  float: right;
+  width: 155rpx;
+  color: #fff;
+  border-radius: 20rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  margin-bottom: 4rpx;
+}
+
+.weui-search-bar__input {
+  display: block;
+  padding-left: 60rpx;
+  background-color: #dfe1df;
+}
+
+.buttons {
+  width: 100%;
+  height: 128rpx;
+  border-bottom: 6rpx solid #dfe1df;
+  display: flex;
+}
+
+.buttons .button_hot {
+  flex: 1;
+  height: 128rpx;
+  background: url("https://api.dzbake.com/Public/xcx/img/hot2.png") no-repeat center center;
+  background-size: contain;
+}
+
+.buttons .button_new {
+  flex: 1;
+  height: 128rpx;
+  background: url("https://api.dzbake.com/Public/xcx/img/new2.png") no-repeat center center;
+  background-size: contain;
+}
+.buttons .hot_tab{
+  background: url("https://api.dzbake.com/Public/xcx/img/hot2active.png") no-repeat center center;
+  background-size: contain;
+}
+.buttons .new_tab{
+  background: url("https://api.dzbake.com/Public/xcx/img/new2active.png") no-repeat center center;
+  background-size: contain;
+}
+.item_border{
+  border-top:none;
+}
+.container .scroll {
+  width: 100%;
+  background: #eee;
+}
+
+.scroll .wrap_content {
+  width: 96%;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-top: 10rpx;
+  position: relative;
+  margin: 10rpx auto;
+  height: 288rpx;
+}
+
+.scroll .wrap_content .user {
+  padding-top: 16rpx;
+  padding-left: 10rpx;
+}
+
+.user_avata {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  float: right;
+  overflow: hidden;
+}
+
+.scroll .wrap_content .user image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.scroll .wrap_content .user text {
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}
+
+.title {
+  /*height: 80rpx;*/
+  font-size: 34rpx;
+  padding-left: 20rpx;
+  width: 92%;
+  max-width: 92%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title text {
+  /*padding-top: 28rpx;*/
+  display: inline-block;
+  font-weight: 600;
+}
+
+.anser_title text {
+  font-size: 38rpx;
+  margin-left: 32rpx;
+}
+
+.anser_title .title_content {
+  width: 605rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  height: 100rpx;
+  max-height: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;*/
+}
+
+.nice_wrap {
+  width: 100%;
+  height: 70rpx;
+}
+
+.nice {
+  /*display:flex;
+    justify-content: flex-end;*/
+  float: right;
+  padding-top: 10rpx;
+  margin-right: 10rpx;
+}
+
+.nice text {
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+
+.nice .nice_zan {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.nice .nice_ping {
+  display: inline-block;
+}
+
+.nice .nicehand {
+  margin-left: 8rpx;
+  color: #625f61;
+  font-size: 30rpx;
+}
+
+.nice .comment {
+  margin-left: 8rpx;
+  color: #625f61;
+  font-size: 30rpx;
+}
+
+.nomore {
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  background: #eee;
+}
+
+.footerhide {
+  display: block !important;
+}

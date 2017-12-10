@@ -1,0 +1,434 @@
+/* pages/detailmenu/detailmenu.wxss */
+@import '../style/common.wxss';
+
+.enlargehide {
+  display: none;
+}
+
+.enlargesshow {
+  display: block;
+}
+
+.active::before {
+  content: "\e925";
+}
+
+.mainactive::before {
+  content: "\e925";
+}
+
+.activecollect::before {
+  content: "\e928";
+}
+
+.news {
+  position: relative;
+  width: 100%;
+}
+
+.enlargecoverlist {
+  width: 100%;
+  height: 1344rpx;
+  background: #000;
+  position: fixed;
+  top: 0rpx;
+  z-index: 100000000002;
+  opacity: 0.98;
+  touch-action: none;
+  overflow-y: hidden;
+}
+
+.swiper-box {
+  position: fixed;
+  z-index: 100000000001;
+  width: 100%;
+  height: 39%;
+  top: 50%;
+  left: 50%;
+  margin: -34% 0 0 -42.5%;
+}
+
+.user-header {
+  width: 99%;
+  height: 90rpx;
+  background: #fff;
+  border: 2rpx solid #eee;
+  padding: 0 2rpx 0 2rpx;
+  position: relative;
+  /*display: flex;*/
+  align-items: center;
+}
+
+.title41 {
+  /*position: absolute;*/
+  color: #f4dd26;
+  margin: 0rpx 6rpx 0 20rpx;
+}
+
+.user-header text {
+  font-size: 32rpx;
+}
+
+.user-header .menuname {
+  margin-top: 0rpx;
+}
+
+.user-header .menu {
+  text-indent: 40rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.news .username {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  height: 90rpx;
+  width: 50%;
+  margin-left: 12rpx;
+  float: left;
+}
+
+.news .username image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.news .username text {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.news .utime {
+  position: absolute;
+  right: 2rpx;
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.deimg {
+  width: 100%;
+}
+
+.deimg image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.Materials {
+  width: 100%;
+}
+
+.Materials .Materialsname {
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #3bbac5;
+  margin-left: 30rpx;
+  font-size: 38rpx;
+}
+
+.Materials .Materialsname_list {
+  position: relative;
+}
+
+.Materials .Materials_content {
+  display: flex;
+}
+
+.Materials .Materials_content text {
+  flex: 1;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.practice {
+  margin: 0 auto;
+  width: 96%;
+}
+
+.practice .color-text {
+  /*height: 80rpx;
+  line-height: 80rpx;*/
+  margin-top: 20rpx;
+  display: block;
+  margin-left: 12rpx;
+  font-size: 38rpx;
+}
+
+.practice .step .step_content {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+}
+
+.practice .step .step_content:nth-of-type(1) {
+  margin-top: 10rpx;
+  font-size: 34rpx;
+}
+
+.practice .step .step_content text {
+  margin-left: 12rpx;
+}
+
+.practice .step .step_content .step_img {
+  width: 100%;
+  margin-top: 15rpx;
+}
+
+.practice .step .step_content .step_description {
+  margin-bottom: 10rpx;
+}
+
+.Tips {
+  margin-top: 30rpx;
+}
+
+.tipshide {
+  display: none;
+}
+
+.Tips .Tipsname {
+  color: #3bbac5;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+}
+
+.Tips .Tips_content {
+  /*text-indent: 30rpx;*/
+  font-size: 30rpx;
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
+.spot_Fabulous .thumbs-up {
+  width: 100%;
+  height: 88rpx;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.icon-new42 {
+  color: #bed636;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.newxing::before {
+  color: #f4c81f;
+  position: absolute;
+  right: 110rpx;
+  top: 28rpx;
+  width: 52rpx;
+  height: 50rpx;
+}
+
+.icon-detail {
+  width: 54rpx;
+  height: 50rpx;
+}
+
+.spot_Fabulous .username {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  height: 90rpx;
+  width: 95%;
+  margin-left: 12rpx;
+  float: left;
+}
+
+.spot_Fabulous .username image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.spot_Fabulous .username text {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.usersay {
+  width: 77%;
+  margin: 0 auto;
+  font-size: 30rpx;
+}
+
+.Exhibition {
+  width: 600rpx;
+  margin: 0 auto;
+}
+
+.Exhibitionimg {
+  width: 180rpx;
+  height: 180rpx;
+  float: left;
+  margin: 15rpx 0 0 10rpx;
+}
+
+.Exhibitionimg image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.icon-right {
+  /*position: absolute;
+  right: 40rpx;*/
+  margin: 12rpx 0 10rpx 0;
+  text-align: right;
+  width: 95%;
+}
+
+.icon-right text {
+  margin-left: 16rpx;
+}
+
+.btn {
+  width: 80%;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 40rpx 10%;
+  background: #000;
+  color: #fff;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 650rpx;
+  position: relative;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.close {
+  position: absolute;
+  right: 0rpx;
+  margin-top: 10rpx;
+  color: coral;
+  width:50rpx;
+  height:56rpx;
+ 
+}
+
+.drawer_title {
+  padding: 15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+}
+
+.my_conment {
+  width: 100%;
+  border-top: 2rpx solid #e0e2df;
+  margin-top: 10rpx;
+}
+
+.my_conment .conment {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.my_conment .conment text {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.my_conment .conment input {
+  border: 2rpx solid #e0e2df;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  font-size: 22rpx;
+}
+
+.my_conment .addimg {
+  width: 94%;
+  margin: 20rpx auto 0;
+  display: inline-block;
+  padding-left: 20rpx;
+}
+
+.my_conment .addimg .item-img {
+  width: 166rpx;
+  height: 166rpx;
+  border: 2rpx solid #e0e2e0;
+  position: relative;
+  float: left;
+  margin: 10rpx 0 0 14rpx;
+}
+
+.my_conment .addimg .item-img image {
+  width: 166rpx;
+  height: 166rpx;
+  position: relative;
+  z-index: 10000;
+}
+
+.my_conment .addimg .item-img .word_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -32rpx 0 0 -40rpx;
+  font-size: 24rpx;
+}
+
+.my_conment .addimg .item-img .word_content {
+  color: #adaead;
+}
+
+.my_conment .addimg .an_icon {
+  float: left;
+  height: 150rpx;
+  margin-top: 20rpx;
+  position: relative;
+  margin-left: 20rpx;
+}
+
+.my_conment .addimg .an_icon .anclose {
+  position: absolute;
+  font-size: 30rpx;
+  color: #e85a88;
+  width:42rpx;
+  height:40rpx;
+}
+
+.my_conment .addimg .an_icon .andd {
+  position: absolute;
+  bottom: 0;
+  font-size: 30rpx;
+  width:42rpx;
+  height:40rpx;
+}
+
+.upsubmit {
+  width: 100%;
+}
+
+.upsubmit .submit {
+  width: 30%;
+  float: right;
+  margin: 10rpx 24rpx 10rpx 0;
+}
+
+.upsubmit .submit .sub {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #3bbac5;
+  border-radius: 14rpx;
+}

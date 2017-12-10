@@ -1,0 +1,66 @@
+<view class="container">
+  <div class="weui-search-bar" id="searchBar" style="width:100%;">
+    <form class="weui-search-bar__form" style="display:block;">
+      <view class="weui-search-bar__box">
+        <view class="weui-icon-search icon-sou"></view>
+        <input focus="{{focus}}" class="weui-search-bar__input" id="searchInput" bindinput="bindInput" bindconfirm="bindconfirm" value="{{inputValue}}" bindblur="" />
+        <a href="javascript:" class="weui-icon-clear icon-close16" id="searchClear" bindtap="clickcancel"></a>
+      </view>
+      <view class="{{selectedinput?'hidden':'show'}} weui-search-bar__label" id="searchText" bindtap="bclick">
+        <view class="weui-icon-search icon-sou soucenter"></view>
+        <text style="font-size:30rpx">搜索...</text>
+      </view>
+    </form>
+  </div>
+
+  <!--轮播-->
+  <swiper class="swiper-box" indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="ad">
+      <swiper-item>
+        <image class="swiperimg" mode="aspectFill" src="{{item.img}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--内容部分-->
+  <view class="content">
+    <!--导航条-->
+    <view class="navbarcontent">
+      <view class="navbar ">
+        <view class="hot_title {{selected?'hot_tab':'default'}}" data-idx="0" bindtap="selected"></view>
+        <view class="new_title {{selected1?'new_tab':'default1'}}" data-idx="1" bindtap="selected1"></view>
+      </view>
+      <!--<view class="borderleft"></view>-->
+    </view>
+    <image src="../../images/selecimg.png" style="width:100%;height:62rpx;"></image>
+    <!--最热-->
+    <view class="se_color {{selected?'show':'hidden'}}"></view>
+    <!--最新-->
+    <view class="se_color Menu {{selected1?'show':'hidden'}}"></view>
+    <block wx:for="{{list}}" wx:for-index="idx" wx:key="list">
+      <view class="hot tborder">
+        <span class="icon-new41"></span>
+        <view class="menu_name">{{item.title}}</view>
+        <image src="{{item.cover}}" data-img="{{item.id}}" bindtap="bindViewTap" mode="aspectFill" class="hotimg"></image>
+        <view class="user">
+          <image src="{{item.avatarurl}}"></image>
+          <text>{{item.nickname}}</text>
+        </view>
+        <view class="nice">
+          <view class="nice_zan">
+            <text class="icon-new43"></text>
+            <text class="nicehand">{{item.like_num}}</text>
+          </view>
+          <view class="nice_ping">
+            <text class=" icon-new44"></text>
+            <text class="comment">{{item.comment_num}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>
+<view class="footer_nomore" hidden="{{nomore}}">
+  <view style="width:40%;margin:0 auto;">没有更多了哦~</view>
+</view>
+<!--<loading hidden="{{hiddenLoading}}">加载中...</loading>-->

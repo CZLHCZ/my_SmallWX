@@ -1,0 +1,251 @@
+/* pages/UploadMenu/UploadMenu.wxss */
+@import '../style/weui.wxss';
+@import '../style/common.wxss';
+
+.makebig {
+  position: absolute;
+  right: 0rpx;
+  margin-top: -47rpx;
+  color: #e85a88;
+  width: 66rpx;
+  height: 46rpx;
+}
+
+/*轮播滑动*/
+
+.input-text {
+  border: 1px solid #abcdef;
+  width: 88%;
+  background: #ddd;
+  line-height: 100%;
+  text-indent: 0.5rem;
+  margin: 1rem auto;
+  height: 40px;
+}
+
+.input-button {
+  background: #48c23d;
+  margin: 0.5rem 5%;
+  color: #fff;
+}
+
+.chat-area {
+  width: 90%;
+  margin: 0.5rem 5%;
+  border: 1px solid #ddd;
+  background: #eee;
+  font-size: 1rem;
+}
+
+.red-font {
+  color: #dc143c;
+}
+
+.green-font {
+  color: #48c23d;
+}
+
+.say-content {
+  font-size: 80%;
+  width: 80%;
+  margin: 0.5rem 5%;
+}
+
+/*轮播滑动end*/
+
+.menucover {
+  width: 94%;
+  height: 350rpx;
+  border: 1px solid #eee;
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.menucover .imgtext {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -32rpx 0 0 -120rpx;
+  display: flex;
+  /*justify-content:center;*/
+  align-items: center;
+}
+
+.menucover .imgtext text {
+  font-size: 50rpx;
+  color: #adaead;
+}
+
+.menucover .imgtext .textleft {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.menucover .coverimg image {
+  width: 100%;
+  height: 350rpx;
+  position: relative;
+  z-index: 12;
+}
+
+.menuname {
+  width: 93%;
+  font-size: 40rpx;
+  padding: 20rpx 0 0 0rpx;
+  margin-top: 36rpx;
+}
+
+.menuname text {
+  color: #3bbac5;
+}
+
+.menuname input {
+  border: 2rpx solid gray;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  font-size: 25rpx;
+  background-color: #fff;
+  width: 540rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+}
+
+.menunameicon {
+  font-size: 38rpx;
+}
+
+.uploadleft {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.Materials {
+  width: 93%;
+  margin-top: 50rpx;
+}
+
+.Materials .Ingredients .Ingredients_content .Ingredients_one {
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+  margin-top: 36rpx;
+}
+
+.Materials .Ingredients .add_Ingredients {
+  font-size: 30rpx;
+  color: #3bbac5;
+  margin-top: -44rpx;
+  display: inline-block;
+  width: 56rpx;
+  height: 40rpx;
+}
+
+.Materials .Ingredients .Ingredients_content .Ingredients_one text {
+  float: left;
+  font-size: 30rpx;
+  width: 110rpx;
+}
+
+.Materials .Ingredients .Ingredients_content .Ingredients_one input {
+  float: left;
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 20rpx;
+  width: 206rpx;
+  font-size: 30rpx;
+}
+
+.practice .step .step_content {
+  position: relative;
+  margin-top: 18rpx;
+}
+
+.step1 {
+  font-size: 30rpx;
+  margin-left: 0rpx !important;
+}
+
+.practice .step .step_content:nth-of-type(1) {
+  position: relative;
+  margin-top: -6rpx;
+}
+
+.practice .step .step_content .step_position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -120rpx;
+  margin-top: -24rpx;
+}
+
+.colorstep {
+  color: #adaead !important;
+}
+
+.colortext {
+  font-size: 30rpx;
+  margin-left: 0 !important;
+}
+
+.practice .step .step_content input {
+  margin-top: 24rpx;
+}
+
+.practice .step .step_close {
+  font-size: 30rpx;
+  position: absolute;
+  right: -8rpx;
+  top: 18rpx;
+  color: #e85a88;
+  width:40rpx;
+  height:40rpx;
+}
+
+.step_img {
+  width: 100%;
+  border: 1px solid #eee;
+  height: 400rpx;
+  position: relative;
+}
+
+.Tips {
+  padding-top: 130rpx;
+}
+
+.Tips input {
+  border: 1px solid gray;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  /*text-indent: 20rpx;*/
+  padding-left: 20rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+}
+
+.Release {
+  width: 100%;
+  height: 358rpx;
+  display: flex;
+  align-items: center;
+}
+
+.Release button {
+  width: 220rpx;
+  background-color: #3bbac5;
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.upload {
+  font-size: 26rpx;
+  position: absolute;
+  margin-top: 19rpx;
+}
+
+.add15 {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  width:45rpx;
+  height:45rpx;
+}

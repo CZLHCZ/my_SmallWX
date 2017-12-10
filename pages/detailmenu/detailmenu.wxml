@@ -1,0 +1,133 @@
+<!--pages/detailmenu/detailmenu.wxml-->
+<view class="container">
+  <view class="news sclass">
+    <view class="user-header">
+      <text class="icon-new41 title41"></text>
+      <text class="menu">{{menudata.title}}</text>
+      <text class="utime">{{menudata.create_time}}</text>
+    </view>
+    <view class="deimg">
+      <image src="{{menudata.cover}}" mode="aspectFill"></image>
+    </view>
+    <view class="username">
+      <image src="{{menudata.avatarurl}}"></image>
+      <text class="uname">{{menudata.nickname}}</text>
+    </view>
+  </view>
+
+  <!--用料-->
+  <view class="Materials">
+    <text class="Materialsname Mborder">用料:</text>
+
+    <!--用料渲染-->
+    <block wx:for="{{menudata.use}}" wx:for-index="idx" wx:key="use">
+      <view class="Materialsname_list borderleft">
+        <view class="Materials_content sclass">
+          <text>{{item.name}}</text>
+          <text>{{item.num}}</text>
+        </view>
+      </view>
+    </block>
+
+    <!--做法-->
+    <view class="practice">
+      <text class="color-text">做法:</text>
+      <view class="step">
+        <block wx:for="{{menudata.step}}" wx:for-index="idx" wx:key="step">
+          <view class="step_content Dborder">
+            <text>步骤{{idx+1}}:</text>
+            <view class="step_img">
+              <image src="{{item.img}}" wx:if="{{item.img.length>0}}" data-it="{{idx}}" mode="aspectFill" bindtap="enlargeimg"></image>
+            </view>
+            <view class="step_description">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+
+    <!--小贴士-->
+    <view class="Tips {{tipshide}}">
+      <view class="small_tips Dborder">
+        <text class="Tipsname">小贴士:</text>
+        <view class="Tips_content ">{{menudata.tips}}</view>
+      </view>
+    </view>
+    <!--小贴士end-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view class="coverwrap drawer_screen" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+      <!--drawer content-->
+      <text class="icon-close16 close" bindtap="powerDrawer" data-statu="close"></text>
+      <view class="drawer_title"></view>
+      <view class="my_conment">
+        <view class="conment">
+          <text>我要评论</text>
+          <input placeholder="点击添加新评论" bindinput="inputcomment" />
+        </view>
+        <view class="addimg">
+          <!--<view class="item-img"  bindtap="aloneimg">
+            <image src="{{aloneimg}}" bindtap="enterPreview" mode="aspectFill"></image>
+            <view class="word_content" bindtap="chooseImageTap">
+              <text>+</text>
+              <text>点击</text>
+              <view class="wordadd">添加图片</view>
+            </view>
+          </view>-->
+          <block wx:for="{{addimg}}" wx:for-index="idx" wx:if="{{idx>=0}}" wx:key="*this">
+            <view class="item-img" data-it="{{item.id}}" bindtap="chooseImageTap">
+              <image src="{{img[idx]}}" bindtap="enterPreview" mode="aspectFill"></image>
+              <view class="word_content">
+                <text>+</text>
+                <text>点击</text>
+                <view class="wordadd">添加图片</view>
+              </view>
+            </view>
+          </block>
+          <view class="an_icon">
+            <block wx:for="{{addimg}}" wx:key="that">
+              <text class="icon-close16 anclose" data-id="{{item.id}}"  bindtap="removeimg"></text>
+            </block>
+            <span class="icon-tanjia15 andd" bindtap="addimgdata"></span>
+          </view>
+        </view>
+      </view>
+      <view class="upsubmit">
+        <view class="submit">
+          <button class="sub" bindtap="EventHandle">提交</button>
+        </view>
+      </view>
+    </view>
+
+    <!--点赞-->
+    <view class="spot_Fabulous">
+      <view class="thumbs-up tborder">
+        <span class="icon-new42 icon-left {{menudata.setlike==1? 'active':'color'}}" bindtap="clicknice" data-mainlike="{{menudata.setlike}}" data-oid="{{menudata.id}}"></span>
+        <span class="icon-new45 newxing  icon-collect {{menudata.setcollection==1? 'activecollect':'collectcolor'}}" data-setcollection="{{menudata.setcollection}}" data-oid="{{menudata.id}}" bindtap="clickCollect"></span>
+        <span class="icon-new44 ping icon-detail" bindtap="utill"></span>
+      </view>
+      <view class="users Mborder" wx:for="{{commentdata}}" wx:for-index="idx" wx:key="prase">
+        <view class="username">
+          <image src="{{item.avatarurl}}"></image>
+          <text class="uname">{{item.nickname}}</text>
+        </view>
+        <view class="usersay">{{item.content}}</view>
+        <view wx:for="{{item.imgs}}" class="Exhibition" wx:key="Exhibition">
+          <view class="Exhibitionimg">
+            <image src="{{item}}" data-index="{{index}}" data-idx="{{idx}}" mode="scaleToFill" bindtap="enlargeimglist"></image>
+          </view>
+        </view>
+        <view class="clear"></view>
+        <view class="icon-new42 icon-right {{item.setlike==1? 'active':'color'}}" bindtap="praise" data-index="{{idx}}" data-like="{{item.setlike}}" data-id="{{item.id}}">
+          <text style="color:#625f61">{{item.like_num}}</text>
+        </view>
+      </view>
+    </view>
+
+
+
+
+    <!--点赞end-->
+  </view>
+</view>

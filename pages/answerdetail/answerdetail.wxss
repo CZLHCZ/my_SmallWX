@@ -1,0 +1,155 @@
+/* pages/answerdetail/answerdetail.wxss */
+@import '../style/common.wxss';
+
+.container {
+  background-color: #eee;
+  justify-content: flex-start !important;
+}
+.title_wrap{
+  width:100%;
+}
+.container .add_title {
+  height: 120rpx;
+  padding-left: 22rpx;
+  border-top: 2rpx solid #818481;
+  padding-top: 20rpx;
+}
+
+.container .add_title .addtitle {
+  border: 2rpx solid #818481;
+  border-radius: 20rpx;
+  width: 400rpx;
+  font-size: 25rpx;
+  margin-top: 13rpx;
+  background-color: #fff;
+  padding-left: 30rpx;
+  height:70rpx;
+}
+
+.container .text {
+  width: 94%;
+  margin: 0 auto;
+  border: 2rpx solid #818481;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.text .textarea {
+  width: 94%;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
+  height: 252rpx;
+}
+
+.addimg {
+  width: 95%;
+  margin-top: 20rpx;
+  /*display: flex;*/
+}
+
+.addimg .item-img {
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 20rpx;
+  position: relative;
+  float: left;
+  margin: 10rpx 0 0 10rpx;
+  background-color: #fff;
+}
+
+.addimg .item-img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  position: relative;
+  z-index: 12;
+}
+
+.addimg .item-img .word_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -36rpx 0 0 -30rpx;
+  color: #adaead;
+}
+
+.add {
+  position: absolute;
+  left: -46rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.add::before {
+  color: #adaead;
+}
+
+.wordadd {
+  font-size: 24rpx;
+}
+
+/*.addimg .item-img .word_content text:nth-of-type(1) {
+  font-size: 72rpx;
+  padding-right: 10rpx;
+}
+
+.addimg .item-img .word_content text:nth-of-type(2) {
+  position: absolute;
+  margin-top: 10rpx;
+}
+
+.addimg .item-img .word_content .wordadd {
+  float: right;
+  margin-top: 48rpx;
+}*/
+
+.container .upsubmit {
+  width: 94%;
+  margin-top: 20rpx;
+}
+
+.container .upsubmit .submit {
+  width: 200rpx;
+  float: right;
+}
+
+.container .upsubmit .submit .sub {
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #fff;
+  background: #3bbac5;
+}
+
+.an_icon {
+  width: 40rpx;
+  height: 180rpx;
+  display: flex;
+  float: left;
+  margin-left: 20rpx;
+  padding: 20rpx 0;
+  position:relative;
+}
+
+.anclose {
+  font-size: 35rpx;
+  /*float: left;
+  margin-top: 14rpx;
+  margin-left: -44rpx;*/
+  position: absolute;
+  z-index: 100000000;
+  color: #e85a88;
+  width:50rpx;
+  height:50rpx;
+  margin-top:10rpx;
+}
+
+.andd {
+  align-self: flex-end;
+  position: absolute;
+  font-size: 35rpx;
+  width:50rpx;
+  height:50rpx;
+  margin-top:10rpx;
+  bottom:0rpx;
+}

@@ -1,0 +1,102 @@
+<!--pages/AnswerContent/AnswerContent.wxml-->
+<view class="enlargecoverlist {{showViewlist?'enlargeshow':'enlargehide'}}"></view>
+<view class="container">
+
+  <!--header-->
+  <view class="user_header">
+    <view class="users">
+      <view class="anser_title">
+        <text class="icon-new41 usernew41"></text>
+        <text>{{detailData.title}}</text>
+      </view>
+      <view class="username">
+        <image src="{{detailData.avatarurl}}"></image>
+        <text>{{detailData.nickname}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="enlargecover {{showView?'enlargeshow':'enlargehide'}}"></view>
+  <!--提交的内容-->
+  <view class="wrap_content">
+    <view class="up_content">
+      <text class="word_content">{{detailData.desc_describe}}</text>
+      <view class="img_content" wx:if="{{detailData.imgs}}">
+        <image wx:for="{{detailData.imgs}}" mode="aspectFill" src="{{item}}" data-index="{{index}}" wx:key="img_index" bindtap="enlargeimg"></image>
+      </view>
+      <view class="nice_wrap">
+        <view class="nice">
+          <view class="nice_zan">
+            <view class="eye">
+              <image src="../../images/eye60.png"></image>
+            </view>
+            <text class="nicehand">{{detailData.visit_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{answers}}" wx:for-index="idx" class="user_answer" wx:key="user_answer">
+    <view class="user_list">
+      <view class="listheader">
+        <view class="userhead">
+          <image src="{{item.avatarurl}}"></image>
+          <text>{{item.nickname}}</text>
+        </view>
+        <text>{{item.create_time}}</text>
+      </view>
+      <view class="list_message">{{item.content}}</view>
+      <view class="user_answerimg">
+        <block wx:for="{{item.imgs}}" wx:key="listimgs">
+          <image src="{{item}}" class="user_answer-img" data-index="{{index}}" data-idx="{{idx}}" mode="aspectFill" bindtap="enlargeimglist"></image>
+        </block>
+      </view>
+      <view class="nice_wrap">
+        <view class="nice">
+          <view class="nice_zan">
+            <text class="icon-new42 {{item.setlike==1? 'active':'color'}}" bindtap="praise" data-index="{{idx}}" data-like="{{item.setlike}}" data-id="{{item.id}}"></text>
+            <text class="nicehand" style="color:#625f61;margin-left:10rpx">{{item.like_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="my_conment">
+    <view class="conment">
+      <text>我要回答</text>
+      <input placeholder="点击添加回答" maxlength="-1" value="{{inputValue}}" bindinput="inputcomment" />
+    </view>
+    <view class="addimg">
+      <!--<view class="item-img"  bindtap="aloneimg">
+        <image src="{{aloneimg}}" bindtap="enterPreview" mode="aspectFill"></image>
+        <view class="word_content" bindtap="chooseImageTap">
+          <text>+</text>
+          <text>点击</text>
+          <view class="wordadd">添加图片</view>
+        </view>
+      </view>-->
+      <block wx:for="{{addimg}}" wx:for-index="idx"  wx:key="*this">
+        <view class="item-img" data-it="{{item.id}}" bindtap="chooseImageTap">
+          <image src="{{img[idx]}}" wx:if="{{img.length>0}}" bindtap="enterPreview" mode="aspectFill"></image>
+          <view class="word_content">
+            <text class="icon-tanjia15 add"></text>
+            <text style="font-size:24rpx;">点击</text>
+            <view class="wordadd">添加图片</view>
+          </view>
+        </view>
+      </block>
+      <view class="an_icon">
+        <block wx:for="{{addimg}}" wx:key="that">
+          <text class="icon-close16 anclose" data-id="{{item.id}}" bindtap="removeimg"></text>
+        </block>
+        <span class="icon-tanjia15 andd" bindtap="addimgdata"></span>
+      </view>
+    </view>
+  </view>
+  <view class="upsubmit">
+    <view class="submit">
+      <button class="sub" bindtap="EventHandle">提交</button>
+    </view>
+  </view>
+
+
+</view>

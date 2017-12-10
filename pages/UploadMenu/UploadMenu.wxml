@@ -1,0 +1,92 @@
+<!--pages/UploadMenu/UploadMenu.wxml-->
+<view class="container">
+  <view class="menucover">
+    <view class="imgtext" bindtap="coverimage">
+      <text>+</text>
+      <text class="textleft">点击添加菜谱封面</text>
+    </view>
+    <view class="coverimg" bindtap="coverimage">
+      <image mode="aspectFill" src="{{logo}}"></image>
+    </view>
+  </view>
+  <view class="menuname">
+    <span class="icon-pen19 menunameicon"></span>
+    <text class="uploadleft">菜谱名称</text>
+    <input placeholder="添加菜谱..." value="{{inputValue}}" bindinput="inputtitle" />
+  </view>
+
+  <!--用料-->
+  <view class="Materials">
+    <span class="icon-pen19 menunameicon"></span>
+    <text class="color-text uploadleft">用料</text>
+    <view class="Ingredients">
+      <view class="Ingredients_content">
+        <view class="Ingredients_one" style="margin-top:-3rpx">
+          <text>食材1:</text>
+          <input type="text" value="{{inputValue}}" bindchange="inputname" data-num="0" />
+          <text style="text-align:center;">用量:</text>
+          <input id="num" name="num" value="{{inputValue}}" type="text" data-num="0" bindchange="inputnum" />
+        </view>
+        <block wx:for="{{usekeylist}}" wx:key="id">
+          <view class="Ingredients_one two  {{item.id}}" data-id="{{item.id}}" style="margin-top:16rpx">
+            <text>食材{{index+2}}:</text>
+            <input type="text" value="{{inputValue}}" bindchange="inputname" data-num="{{index+1}}" />
+            <text style="text-align:center;">用量:</text>
+            <input type="text" value="{{inputValue}}" bindchange="inputnum" data-num="{{index+1}}" />
+          </view>
+          <span class="icon-close16 iconclose makebig" data-id="{{item.id}}" data-remove="{{index}}" bindtap="removelist" style="font-size:30rpx;"></span>
+        </block>
+      </view>
+      <text class=" icon-tanjia15 add_Ingredients" bindtap="usekey_addnewdata"></text>
+    </view>
+
+    <!--做法-->
+    <view class="practice">
+      <span class="icon-m18"></span>
+      <text class="color-text uploadleft">做法</text>
+      <view class="step">
+
+        <!--<view class="step_content">
+          <text>步骤一:</text>
+          <view class="step_position {{flagstep}}" bindtap="steponeimage">
+            <text>+</text>
+            <text>点击添加步骤图</text>
+          </view>
+          <view class="step_img">        
+            <image src="{{stepone}}" mode="scaleToFill" bindtap="steponeimage"></image>
+          </view>
+          <input placeholder="点击添加步骤说明" />
+        </view>-->
+        <block wx:for="{{steplist.inputs}}"  wx:key="step_content">
+          <view class="step_content">
+            <text class="step1">步骤{{index+1}}:</text>
+            <view class="step_position" bindtap="chooseImageTap">
+              <text class="colorstep">+</text>
+              <text class="colorstep colortext">点击添加步骤图</text>
+            </view>
+            <view class="step_img">
+              <image src="{{steplist.imgs[index]}}" mode="aspectFill" bindtap="chooseImageTap" data-it="{{index}}"></image>
+            </view>
+            <span class="icon-close16 step_close" data-remove="{{index}}" data-id="{{item.id}}" bindtap="removestep"></span>
+            <input type="text" placeholder="点击添加步骤说明" id="step" value="{{inputValue}}" data-it="{{index}}" bindchange="stepinput" />
+          </view>
+        </block>
+
+        <view class="icon-tanjia15 upload_add add15" bindtap="addstepdata"></view>
+      </view>
+    </view>
+    <view class="clear"></view>
+
+    <!--贴士-->
+    <view class="Tips">
+      <span class="icon-eye17" style="font-size:28rpx;"></span>
+      <text class="color-text uploadleft">小贴士</text>
+      <input placeholder="增加小贴士，让大家更快上手~(选填)" id="Tips" value="{{inputValue}}" bindchange="inputtips" />
+    </view>
+
+    <!--发布-->
+    <view class="Release">
+      <button bindtap="clickButton">发布菜谱</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,240 @@
+/* pages/Selectmenu/Selectmenu.wxss */
+@import '../style/weui.wxss';
+@import '../style/common.wxss';
+
+.container .hidden {
+  display: none;
+}
+
+.weui-search-bar__input {
+  display: block;
+  padding-left: 60rpx;
+  background-color: #dfe1df;
+}
+
+
+
+.hot_title {
+  width: 50%;
+  height: 82rpx;
+  background: url('https://api.dzbake.com/Public/xcx/img/hotactive.png') no-repeat center center;
+  background-size: contain;
+}
+
+.new_title {
+  width: 50%;
+  height: 82rpx;
+  background: url('https://api.dzbake.com/Public/xcx/img/active38.png') no-repeat center center;
+  background-size: contain;
+}
+
+.hot_tab {
+  background: url('https://api.dzbake.com/Public/xcx/img/hot39.png') no-repeat center center;
+  background-size: contain;
+}
+
+.new_tab {
+  background: url('https://api.dzbake.com/Public/xcx/img/new.png') no-repeat center center;
+  background-size: contain;
+}
+
+.swiper-box {
+  width: 100%;
+  height: 334rpx;
+}
+
+.swiper-box .swiperimg {
+  width: 100%;
+  height: 334rpx;
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 2rpx;
+}
+
+.swiper-box .wx-swiper-dot {
+  width: 40rpx;
+  display: inline-flex;
+  height: 10rpx;
+  margin-left: 20rpx;
+  justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: #e0e2e0;
+  border-radius: 8rpx;
+}
+
+.swiper-box .wx-swiper-dot-active::before {
+  background: #8e8686;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .navbarcontent {
+  position: relative;
+  border-top: 3rpx solid #ddd;
+  /*height: 84rpx;*/
+}
+
+.content .navbar {
+  display: flex;
+  background: #fff;
+  padding: 32rpx 20rpx 16rpx;
+}
+
+.content .navbar .nav_title {
+  width: 100%;
+}
+
+.content .navbar .nav_title text {
+  width: 50%;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.content .se_color {
+  background-color: #dfe1df;
+}
+
+.navbar .item {
+  position: relative;
+  width: 45%;
+  text-align: center;
+  border: 2rpx solid #ff6091;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+}
+
+.navbar .new {
+  content: "\e931";
+  color: #000;
+}
+
+.navbar .item:nth-of-type(1) {
+  position: absolute;
+  left: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: url;
+}
+
+.navbar .item:nth-of-type(2) {
+  position: absolute;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.navbar .item.active {
+  color: #fff;
+  background-color: #ff6091;
+}
+
+.hot {
+  position: relative;
+  background: #fff;
+}
+
+.hot .hotimg {
+  width: 94%;
+  height: 400rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.hot .menu_name {
+  font-size: 36rpx;
+  margin-left: 50rpx;
+  height: 70rpx;
+  display: block;
+  line-height: 70rpx;
+}
+
+.hot .user {
+  padding: 0rpx 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.hot .user text {
+  margin-top: 6rpx;
+  font-size: 25rpx;
+  margin-left: 6rpx;
+}
+
+.hot .user image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.icon-new41 {
+  position: absolute;
+  color: #f4dd26;
+  margin: 17rpx 0 0 20rpx;
+}
+
+.icon-new42 {
+  color: #bed636;
+}
+
+.icon-new44 {
+  color: #bed636;
+}
+
+.hot .nice {
+  position: absolute;
+  right: 20rpx;
+  bottom: 14rpx;
+  display: inline-block;
+}
+
+.hot .nice text {
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.hot .nice .nice_zan {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.hot .nice .nice_ping {
+  display: inline-block;
+}
+
+.hot .nice .nicehand {
+  margin-left: 8rpx;
+  color: #625f61;
+}
+
+.hot .nice .comment {
+  margin-left: 8rpx;
+  color: #625f61;
+}
+
+.navigator-hover {
+  color: lightblue;
+}
+
+/** 自定义其他点击态样式类 **/
+
+.other-navigator-hover {
+  color: fuchsia;
+  background-color: red;
+}
+.footer_nomore {
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  background: #eee;
+}

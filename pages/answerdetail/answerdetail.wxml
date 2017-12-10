@@ -1,0 +1,43 @@
+<!--pages/answerdetail/answerdetail.wxml-->
+<view class="container" style="height:{{systemInfo.windowHeight}}px;">
+  <view class="title_wrap">
+    <view class="add_title">
+      <input class="addtitle" id="anser" name="anser" type="text" placeholder="添加问题的题目..." bindinput="inputanser" />
+    </view>
+  </view>
+  <view class="text">
+    <textarea class="textarea" placeholder="点击添加问题的内容......" maxlength="0" placeholder-style="color:#818481;" bindinput="inputtextaret" />
+  </view>
+  <view class="addimg">
+    <!--<view class="item-img"  >
+      <image src="{{aloneimg}}"  bindtap="aloneimg"  mode="aspectFill"></image>
+      <view class="word_content" bindtap="chooseImageTap">
+        <text class="icon-tanjia15 add"></text>
+        <text style="font-size:24rpx;">点击</text>
+        <view class="wordadd">添加图片</view>
+      </view>
+      <text class="icon-close16 anclose" data-id="{{item.id}}" data-remove="{{idx}}" bindtap="removeimg"></text>
+    </view>-->
+    <block wx:for="{{addimg}}" wx:for-index="idx" wx:key="addimg">
+      <view class="item-img" data-it="{{idx+1}}" bindtap="chooseImageTap">
+        <image src="{{img[idx]}}" bindtap="enterPreview" mode="aspectFill"></image>
+        <view class="word_content">
+          <text class="icon-tanjia15 add"></text>
+          <text style="font-size:24rpx;">点击</text>
+          <view class="wordadd">添加图片</view>
+        </view>
+      </view>
+    </block>
+    <view class="an_icon">
+    <block wx:for="{{addimg}}" wx:for-index="idx" wx:key="add">
+      <text class="icon-close16 anclose" data-id="{{item.id}}" data-remove="{{idx}}" bindtap="removeimg"></text>
+    </block>
+      <span class="icon-tanjia15 andd" bindtap="addimgdata"></span>
+    </view>
+  </view>
+  <view class="upsubmit">
+    <view class="submit">
+      <button class="sub" bindtap="EventHandle">提交</button>
+    </view>
+  </view>
+</view>
